@@ -245,7 +245,7 @@
                                     <constraint firstItem="rM2-Rq-7c5" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1pa-F2-MaM" secondAttribute="trailing" constant="8" symbolic="YES" id="Lnn-lC-ktI"/>
                                     <constraint firstItem="3QB-FG-O7O" firstAttribute="centerY" secondItem="ayU-av-KCH" secondAttribute="centerY" id="M0F-if-hLD"/>
                                     <constraint firstItem="4BB-ha-WFT" firstAttribute="top" secondItem="PZO-c3-8dH" secondAttribute="bottom" constant="8" id="MEh-QX-YZh"/>
-                                    <constraint firstItem="7gA-7y-bDp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cGl-RZ-yka" secondAttribute="trailing" symbolic="YES" id="NO0-1Z-j0b"/>
+                                    <constraint firstItem="7gA-7y-bDp" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cGl-RZ-yka" secondAttribute="trailing" constant="8" symbolic="YES" id="NO0-1Z-j0b"/>
                                     <constraint firstItem="wNh-mQ-QhY" firstAttribute="leading" secondItem="TBU-aZ-TX9" secondAttribute="leading" constant="16" id="NWs-os-xc6"/>
                                     <constraint firstItem="IxG-tc-wTc" firstAttribute="top" secondItem="TBU-aZ-TX9" secondAttribute="top" id="P5T-kH-JId"/>
                                     <constraint firstAttribute="trailing" secondItem="aUr-g2-oFl" secondAttribute="trailing" constant="16" id="PfY-3V-Dvz"/>
@@ -304,7 +304,6 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="TBU-aZ-TX9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="64" id="5l2-Md-fbO"/>
                             <constraint firstItem="TBU-aZ-TX9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8ge-3F-Fuk"/>
                             <constraint firstItem="TBU-aZ-TX9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BYv-Hd-v2X"/>
                             <constraint firstItem="TBU-aZ-TX9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J1V-B4-GLj"/>
