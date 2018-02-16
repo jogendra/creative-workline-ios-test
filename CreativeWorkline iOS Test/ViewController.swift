@@ -10,16 +10,29 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var emailButton: UIButton!
+    @IBOutlet weak var websiteButton: UIButton!
+    @IBOutlet weak var readMoreButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        initialUISetups()
+    }
+    
+    fileprivate func initialUISetups() {
+        emailButton.underline()
+        websiteButton.underline()
+        readMoreButton.underline()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+}
+
+extension UIButton {
+    
+    func underline() {
+        let attributedString = NSMutableAttributedString(string: (self.titleLabel?.text!)!)
+        attributedString.addAttribute(NSAttributedStringKey.underlineStyle, value: NSUnderlineStyle.styleSingle.rawValue, range: NSRange(location: 0, length: (self.titleLabel?.text!.count)!))
+        self.setAttributedTitle(attributedString, for: .normal)
     }
-
-
 }
 

@@ -74,6 +74,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM2-Rq-7c5">
                                         <rect key="frame" x="186" y="326" width="149" height="24"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <state key="normal" title="www.swardu.com">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -92,6 +93,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="About Us" id="lWk-a1-iig"/>
+                    <connections>
+                        <outlet property="emailButton" destination="fJr-u0-OuC" id="Fmy-10-h5l"/>
+                        <outlet property="readMoreButton" destination="sGJ-Us-fHp" id="b53-lq-d54"/>
+                        <outlet property="websiteButton" destination="rM2-Rq-7c5" id="WsE-1O-tgf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
