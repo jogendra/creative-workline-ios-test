@@ -8,14 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView! {
-        didSet {
-            scrollView.delegate = self
-            scrollView.isScrollEnabled = true
-        }
-    }
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var websiteButton: UIButton!
     @IBOutlet weak var readMoreButton: UIButton!
@@ -23,6 +18,11 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         initialUISetups()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 1000)
     }
     
     fileprivate func initialUISetups() {
