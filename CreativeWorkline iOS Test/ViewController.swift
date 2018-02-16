@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var termsOfUseButton: UIButton!
     @IBOutlet weak var privacyPolicyButton: UIButton!
     
+    @IBOutlet weak var contentView: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
         initialUISetups()
@@ -29,7 +30,17 @@ class ViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         // Set the content size of Scroll View
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 1250)
+        setScrollViewContentSize()
+    }
+    
+//    override func viewDidAppear(_ animated: Bool) {
+//        super.viewDidAppear(true)
+//        let scrollViewSize = scrollView.frame.size
+//        scrollView.contentSize = scrollViewSize
+//    }
+    
+    private func setScrollViewContentSize() {
+        scrollView.contentSize = CGSize(width: view.frame.width, height: 1350)
     }
     
     fileprivate func initialUISetups() {
@@ -38,6 +49,16 @@ class ViewController: UIViewController {
         websiteButton.underline()
         readMoreButton.underline()
         cwWebsiteButton.underline()
+        
+        makePartOfStringTextItallic()
+    }
+    
+    private func makePartOfStringTextItallic() {
+        
+        let descriptionText: NSString = (descriptionTextView.text as? NSString)!
+        let strText = NSMutableAttributedString(string: descriptionTextView.text)
+        strText.addAttribute(NSAttributedStringKey.font, value: UIFont.italicSystemFont(ofSize: 12.0), range: descriptionText.range(of: "tagging the world!"))
+        descriptionTextView.attributedText = strText
     }
     
     // MARK: Actions
