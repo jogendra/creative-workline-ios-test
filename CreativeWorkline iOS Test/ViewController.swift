@@ -9,6 +9,21 @@
 import UIKit
 import MessageUI
 
+private struct Constants {
+    static let scrollViewHeight: CGFloat = 1350
+    static let stringToItalic: String = "tagging the world!"
+    static let italicTextFontSize: CGFloat = 12.0
+    static let swarduWebURLString: String = "https://www.swardu.com/"
+    static let creativeWorklineWebURLString: String = "http://www.creativeworkline.com/?ref=si"
+    static let termsURLString: String = "https://www.swardu.com/terms"
+    static let privacyURLString: String = "https://www.swardu.com/privacy"
+    static let supportMail: String = "support@swardu.com"
+    static let supportMailSubject: String = "swardu iOS support request"
+    static let sendMailErrorAlertTitle: String = "Could Not Send Email"
+    static let sendMailErrorAlertMessage: String = "Your device could not send e-mail.  Please check e-mail configuration and try again."
+    static let okActionTitle: String = "OK"
+}
+
 class ViewController: UIViewController {
 
     // MARK: Outlets
@@ -34,17 +49,11 @@ class ViewController: UIViewController {
         setScrollViewContentSize()
     }
     
-//    override func viewDidAppear(_ animated: Bool) {
-//        super.viewDidAppear(true)
-//        let scrollViewSize = scrollView.frame.size
-//        scrollView.contentSize = scrollViewSize
-//    }
-    
     private func setScrollViewContentSize() {
-        scrollView.contentSize = CGSize(width: view.frame.width, height: 1350)
+        scrollView.contentSize = CGSize(width: view.frame.width, height: Constants.scrollViewHeight)
     }
     
-    fileprivate func initialUISetups() {
+    private func initialUISetups() {
         
         emailButton.underline()
         websiteButton.underline()
@@ -58,7 +67,7 @@ class ViewController: UIViewController {
         
         let descriptionText: NSString = (descriptionTextView.text as NSString?)!
         let stringText = NSMutableAttributedString(string: descriptionTextView.text)
-        stringText.addAttribute(NSAttributedStringKey.font, value: UIFont.italicSystemFont(ofSize: 12.0), range: descriptionText.range(of: "tagging the world!"))
+        stringText.addAttribute(NSAttributedStringKey.font, value: UIFont.italicSystemFont(ofSize: Constants.italicTextFontSize), range: descriptionText.range(of: Constants.stringToItalic))
         descriptionTextView.attributedText = stringText
     }
     
@@ -76,22 +85,22 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapSwarduWebsite(_ sender: Any) {
-        openURLInBrowser("https://www.swardu.com/")
+        openURLInBrowser(Constants.swarduWebURLString)
     }
     
     @IBAction func didTapReadMore(_ sender: Any) {
     }
     
     @IBAction func didTapCwWebsite(_ sender: Any) {
-        openURLInBrowser("http://www.creativeworkline.com/?ref=si")
+        openURLInBrowser(Constants.creativeWorklineWebURLString)
     }
     
     @IBAction func didTapTermsOfUse(_ sender: Any) {
-        openURLInBrowser("https://www.swardu.com/terms")
+        openURLInBrowser(Constants.termsURLString)
     }
     
     @IBAction func didTapPrivacyPolicy(_ sender: Any) {
-        openURLInBrowser("https://www.swardu.com/privacy")
+        openURLInBrowser(Constants.privacyURLString)
     }
     
     private func openURLInBrowser(_ urlString: String) {
@@ -102,19 +111,19 @@ class ViewController: UIViewController {
     }
     
     // MARK: Mail
-    func configuredMailComposeViewController() -> MFMailComposeViewController {
+    private func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
-        mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
+        mailComposerVC.mailComposeDelegate = self
         
-        mailComposerVC.setToRecipients(["support@swardu.com"])
-        mailComposerVC.setSubject("swardu iOS support request")
+        mailComposerVC.setToRecipients([Constants.supportMail])
+        mailComposerVC.setSubject(Constants.supportMailSubject)
         
         return mailComposerVC
     }
     
-    func showSendMailErrorAlert() {
-        let sendMailErrorAlertViewController = UIAlertController(title: "Could Not Send Email", message: "Your device could not send e-mail.  Please check e-mail configuration and try again.", preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+    private func showSendMailErrorAlert() {
+        let sendMailErrorAlertViewController = UIAlertController(title: Constants.sendMailErrorAlertTitle, message: Constants.sendMailErrorAlertMessage, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: Constants.okActionTitle, style: .default, handler: nil)
         sendMailErrorAlertViewController.addAction(okAction)
         self.present(sendMailErrorAlertViewController, animated: true, completion: nil)
     }
