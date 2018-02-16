@@ -215,7 +215,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="vrx-GV-fKg" secondAttribute="trailing" constant="32" id="05X-1O-fwk"/>
+                                    <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="vrx-GV-fKg" secondAttribute="trailing" constant="32" id="05X-1O-fwk"/>
                                     <constraint firstItem="H8f-tt-HsQ" firstAttribute="top" secondItem="TBU-aZ-TX9" secondAttribute="top" constant="16" id="0Ke-Ax-V62"/>
                                     <constraint firstAttribute="trailing" secondItem="OZY-AE-PnQ" secondAttribute="trailing" constant="16" id="0VB-9c-FW3"/>
                                     <constraint firstItem="ayU-av-KCH" firstAttribute="leading" secondItem="TBU-aZ-TX9" secondAttribute="leading" constant="32" id="1Mv-q2-Lce"/>
@@ -259,7 +259,7 @@
                                     <constraint firstAttribute="trailing" secondItem="aUr-g2-oFl" secondAttribute="trailing" constant="32" id="PfY-3V-Dvz"/>
                                     <constraint firstAttribute="bottom" secondItem="B6h-16-WuY" secondAttribute="bottom" constant="18" id="RnZ-5G-Os3"/>
                                     <constraint firstItem="fJr-u0-OuC" firstAttribute="width" secondItem="wGs-1b-tCx" secondAttribute="width" id="SKX-v7-aKk"/>
-                                    <constraint firstItem="vrx-GV-fKg" firstAttribute="leading" secondItem="TBU-aZ-TX9" secondAttribute="leading" constant="32" id="Tqq-do-DyT"/>
+                                    <constraint firstItem="vrx-GV-fKg" firstAttribute="leading" relation="lessThanOrEqual" secondItem="TBU-aZ-TX9" secondAttribute="leading" constant="32" id="Tqq-do-DyT"/>
                                     <constraint firstAttribute="trailing" secondItem="ryZ-sQ-rmK" secondAttribute="trailing" constant="16" id="VWb-Oh-vNJ"/>
                                     <constraint firstItem="3QB-FG-O7O" firstAttribute="leading" secondItem="ayU-av-KCH" secondAttribute="trailing" constant="16" id="WYD-7a-rzx"/>
                                     <constraint firstAttribute="trailing" secondItem="CRc-b6-iui" secondAttribute="trailing" constant="32" id="Wm4-zS-P3b"/>
