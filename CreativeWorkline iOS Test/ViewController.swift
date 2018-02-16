@@ -89,6 +89,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func didTapReadMore(_ sender: Any) {
+        let point = CGPoint(x: 0, y: descriptionTextView.frame.origin.y)
+        scrollView.setContentOffset(point, animated: true)
     }
     
     @IBAction func didTapCwWebsite(_ sender: Any) {
