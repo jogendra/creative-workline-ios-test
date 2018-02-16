@@ -67,6 +67,9 @@
                                         <state key="normal" title="Read more">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapReadMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4OH-w1-w6M"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swardu.com AG" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGs-1b-tCx">
                                         <rect key="frame" x="209" y="190" width="150" height="24"/>
@@ -102,6 +105,9 @@
                                         <state key="normal" title="www.swardu.com">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapSwarduWebsite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jXZ-zo-OfX"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Software Realisation by" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vrx-GV-fKg">
                                         <rect key="frame" x="32" y="380" width="311" height="21"/>
@@ -157,6 +163,9 @@
                                         <state key="normal" title="www.creativeworkline.com">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapCwWebsite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5a-gz-Ubu"/>
+                                        </connections>
                                     </button>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wNh-mQ-QhY">
                                         <rect key="frame" x="16" y="585.5" width="343" height="302.5"/>
@@ -168,10 +177,16 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayU-av-KCH">
                                         <rect key="frame" x="32" y="904" width="133.5" height="30"/>
                                         <state key="normal" title="Terms of Use"/>
+                                        <connections>
+                                            <action selector="didTapTermsOfUse:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mte-gT-djb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRc-b6-iui">
                                         <rect key="frame" x="209.5" y="904" width="133.5" height="30"/>
                                         <state key="normal" title="Privacy Policy"/>
+                                        <connections>
+                                            <action selector="didTapPrivacyPolicy:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cbY-IY-BIi"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&amp;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3QB-FG-O7O">
                                         <rect key="frame" x="181.5" y="908.5" width="12" height="21"/>
@@ -194,6 +209,9 @@
                                         <state key="normal" title="support@swardu.com">
                                             <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <connections>
+                                            <action selector="didTapSupportEmail:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pQb-TC-y0u"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -307,9 +325,13 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="1050"/>
                     <connections>
+                        <outlet property="cwWebsiteButton" destination="9nz-3h-DuD" id="mYa-ug-niC"/>
+                        <outlet property="descriptionTextView" destination="wNh-mQ-QhY" id="MR9-US-9nN"/>
                         <outlet property="emailButton" destination="fJr-u0-OuC" id="Fmy-10-h5l"/>
+                        <outlet property="privacyPolicyButton" destination="CRc-b6-iui" id="UJV-em-AB2"/>
                         <outlet property="readMoreButton" destination="sGJ-Us-fHp" id="b53-lq-d54"/>
                         <outlet property="scrollView" destination="TBU-aZ-TX9" id="Huv-Vx-WTz"/>
+                        <outlet property="termsOfUseButton" destination="ayU-av-KCH" id="7Zx-Se-8aQ"/>
                         <outlet property="websiteButton" destination="rM2-Rq-7c5" id="WsE-1O-tgf"/>
                     </connections>
                 </viewController>
