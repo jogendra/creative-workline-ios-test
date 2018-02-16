@@ -8,8 +8,14 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIScrollViewDelegate {
 
+    @IBOutlet weak var scrollView: UIScrollView! {
+        didSet {
+            scrollView.delegate = self
+            scrollView.isScrollEnabled = true
+        }
+    }
     @IBOutlet weak var emailButton: UIButton!
     @IBOutlet weak var websiteButton: UIButton!
     @IBOutlet weak var readMoreButton: UIButton!

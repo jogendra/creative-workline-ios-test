@@ -20,7 +20,7 @@
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBU-aZ-TX9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="986"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="aa_dh" translatesAutoresizingMaskIntoConstraints="NO" id="H8f-tt-HsQ">
                                         <rect key="frame" x="27" y="24" width="100" height="100"/>
@@ -174,6 +174,7 @@
                     <connections>
                         <outlet property="emailButton" destination="fJr-u0-OuC" id="Fmy-10-h5l"/>
                         <outlet property="readMoreButton" destination="sGJ-Us-fHp" id="b53-lq-d54"/>
+                        <outlet property="scrollView" destination="TBU-aZ-TX9" id="Huv-Vx-WTz"/>
                         <outlet property="websiteButton" destination="rM2-Rq-7c5" id="WsE-1O-tgf"/>
                     </connections>
                 </viewController>
