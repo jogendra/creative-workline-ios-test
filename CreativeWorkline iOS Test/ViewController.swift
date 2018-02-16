@@ -43,6 +43,7 @@ class ViewController: UIViewController {
         initialUISetups()
     }
     
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         // Set the content size of Scroll View

@@ -161,9 +161,12 @@
                                             <action selector="didTapCwWebsite:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P5a-gz-Ubu"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wNh-mQ-QhY">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNh-mQ-QhY">
                                         <rect key="frame" x="16" y="585.5" width="343" height="357.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="343" id="uVj-JT-3jd"/>
+                                        </constraints>
                                         <string key="text">swardu became the vision that Dieter Hecht had in a midsummer night; in order to retain swardu, he got up and wrote everything down in twenty pages. He later said, he did not have to invent anything, it was all already there, the name, functionality, strategy. Early that morning he went to Peter Arnold to have  the company registered. After Peter reviewed and understood the idea, he immediately became a shareholder and since then he has been responsible for Legal and Admin. We decided to get the programming done in Berlin; Berlin is inspirational, energizing, vibrating, and that is how we wanted swardu to be. In Jonas Soukup we found a strong technical partner and friend. Our logo, the rainbow ball, we’ve created in Incredible India. Financing swardu wasn’t easy, but we did it all on our own, and till today we are a totally independent company. We thank everyone who helped us to make this story happen. Special thanks go to JJ Sunier and Christian Heller. Most importantly, we want to thank all swardu users for their interest; please have fun with swardu, and keep on tagging the world!</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -307,7 +310,7 @@
                             <constraint firstItem="TBU-aZ-TX9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="8ge-3F-Fuk"/>
                             <constraint firstItem="TBU-aZ-TX9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BYv-Hd-v2X"/>
                             <constraint firstItem="TBU-aZ-TX9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="J1V-B4-GLj"/>
-                            <constraint firstItem="TBU-aZ-TX9" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" priority="250" id="fys-r0-i6E"/>
+                            <constraint firstItem="TBU-aZ-TX9" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" priority="250" constant="5" id="fys-r0-i6E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
