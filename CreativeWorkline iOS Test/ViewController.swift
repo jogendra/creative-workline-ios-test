@@ -9,6 +9,8 @@
 import UIKit
 import MessageUI
 
+// MARK: Default Constants
+
 private struct Constants {
     static let scrollViewHeight: CGFloat = 1041
     static let stringToItalic: String = "tagging the world!"
@@ -36,8 +38,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var descriptionTextView: UITextView!
     @IBOutlet weak var termsOfUseButton: UIButton!
     @IBOutlet weak var privacyPolicyButton: UIButton!
-    
     @IBOutlet weak var contentView: UIView!
+    
+    // ViewController LifeCycle Methods
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialUISetups()
@@ -50,10 +54,12 @@ class ViewController: UIViewController {
         setScrollViewContentSize()
     }
     
+    // Set content size of ScrollView
     private func setScrollViewContentSize() {
         scrollView.contentSize = CGSize(width: view.frame.width, height: Constants.scrollViewHeight)
     }
     
+    // Initial setups for UI Components
     private func initialUISetups() {
         
         emailButton.underline()
@@ -64,6 +70,7 @@ class ViewController: UIViewController {
         makePartOfStringTextItallic()
     }
     
+    // Make "tagging the world!" Italic - As given in the task
     private func makePartOfStringTextItallic() {
         
         let descriptionText: NSString = (descriptionTextView.text as NSString?)!
@@ -74,7 +81,7 @@ class ViewController: UIViewController {
     
     
     
-    // MARK: Actions
+    // MARK: Action Methods
     
     @IBAction func didTapSupportEmail(_ sender: Any) {
         let mailComposeViewController = configuredMailComposeViewController()
@@ -106,6 +113,7 @@ class ViewController: UIViewController {
         openURLInBrowser(Constants.privacyURLString)
     }
     
+    // Open URL in mobile's browser (Outside the app)
     private func openURLInBrowser(_ urlString: String) {
         guard let url = URL(string: urlString) else {
             return
@@ -124,6 +132,7 @@ class ViewController: UIViewController {
         return mailComposerVC
     }
     
+    // AlertView for send mail error
     private func showSendMailErrorAlert() {
         let sendMailErrorAlertViewController = UIAlertController(title: Constants.sendMailErrorAlertTitle, message: Constants.sendMailErrorAlertMessage, preferredStyle: .alert)
         let okAction = UIAlertAction(title: Constants.okActionTitle, style: .default, handler: nil)
@@ -144,6 +153,7 @@ extension ViewController: MFMailComposeViewControllerDelegate {
 
 extension UIButton {
     
+    // Method to Underline Title Text on UIButton
     func underline() {
         let attributedString = NSMutableAttributedString(string: (self.titleLabel?.text!)!)
         attributedString.addAttribute(NSAttributedStringKey.underlineStyle, value: NSUnderlineStyle.styleSingle.rawValue, range: NSRange(location: 0, length: (self.titleLabel?.text!.count)!))
