@@ -10,7 +10,7 @@ import UIKit
 import MessageUI
 
 private struct Constants {
-    static let scrollViewHeight: CGFloat = 1350
+    static let scrollViewHeight: CGFloat = 1041
     static let stringToItalic: String = "tagging the world!"
     static let italicTextFontSize: CGFloat = 12.0
     static let swarduWebURLString: String = "https://www.swardu.com/"

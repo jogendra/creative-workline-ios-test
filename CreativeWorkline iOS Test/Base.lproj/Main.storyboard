@@ -15,7 +15,7 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="CreativeWorkline_iOS_Test" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC" customClass="UIScrollView">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -164,9 +164,6 @@
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wNh-mQ-QhY">
                                         <rect key="frame" x="16" y="585.5" width="343" height="357.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="343" id="uVj-JT-3jd"/>
-                                        </constraints>
                                         <string key="text">swardu became the vision that Dieter Hecht had in a midsummer night; in order to retain swardu, he got up and wrote everything down in twenty pages. He later said, he did not have to invent anything, it was all already there, the name, functionality, strategy. Early that morning he went to Peter Arnold to have  the company registered. After Peter reviewed and understood the idea, he immediately became a shareholder and since then he has been responsible for Legal and Admin. We decided to get the programming done in Berlin; Berlin is inspirational, energizing, vibrating, and that is how we wanted swardu to be. In Jonas Soukup we found a strong technical partner and friend. Our logo, the rainbow ball, we’ve created in Incredible India. Financing swardu wasn’t easy, but we did it all on our own, and till today we are a totally independent company. We thank everyone who helped us to make this story happen. Special thanks go to JJ Sunier and Christian Heller. Most importantly, we want to thank all swardu users for their interest; please have fun with swardu, and keep on tagging the world!</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -255,6 +252,7 @@
                                     <constraint firstItem="fJr-u0-OuC" firstAttribute="width" secondItem="wGs-1b-tCx" secondAttribute="width" id="SKX-v7-aKk"/>
                                     <constraint firstItem="vrx-GV-fKg" firstAttribute="leading" relation="lessThanOrEqual" secondItem="TBU-aZ-TX9" secondAttribute="leading" constant="32" id="Tqq-do-DyT"/>
                                     <constraint firstAttribute="trailing" secondItem="ryZ-sQ-rmK" secondAttribute="trailing" constant="16" id="VWb-Oh-vNJ"/>
+                                    <constraint firstItem="B6h-16-WuY" firstAttribute="top" secondItem="IxG-tc-wTc" secondAttribute="bottom" constant="-36" id="VpT-TR-lqz"/>
                                     <constraint firstItem="3QB-FG-O7O" firstAttribute="leading" secondItem="ayU-av-KCH" secondAttribute="trailing" constant="16" id="WYD-7a-rzx"/>
                                     <constraint firstAttribute="trailing" secondItem="CRc-b6-iui" secondAttribute="trailing" constant="32" id="Wm4-zS-P3b"/>
                                     <constraint firstItem="cuo-Ib-M9l" firstAttribute="top" secondItem="cGl-RZ-yka" secondAttribute="bottom" constant="16" id="XQr-dp-72W"/>
@@ -275,7 +273,6 @@
                                     <constraint firstItem="CRc-b6-iui" firstAttribute="top" secondItem="wNh-mQ-QhY" secondAttribute="bottom" constant="16" id="fyD-x7-XMb"/>
                                     <constraint firstAttribute="trailing" secondItem="rM2-Rq-7c5" secondAttribute="trailing" constant="16" id="ib4-Xx-f1M"/>
                                     <constraint firstAttribute="trailing" secondItem="zvk-ZK-cYJ" secondAttribute="trailing" constant="16" id="j5o-vG-Fug"/>
-                                    <constraint firstItem="IxG-tc-wTc" firstAttribute="centerY" secondItem="TBU-aZ-TX9" secondAttribute="centerY" id="jlS-eM-Pgr"/>
                                     <constraint firstAttribute="trailing" secondItem="B6h-16-WuY" secondAttribute="trailing" constant="16" id="kZi-sb-5L4"/>
                                     <constraint firstItem="5hW-gO-MLi" firstAttribute="centerY" secondItem="tHa-u7-6jK" secondAttribute="centerY" id="ksH-hv-D0X"/>
                                     <constraint firstItem="tHa-u7-6jK" firstAttribute="centerX" secondItem="H8f-tt-HsQ" secondAttribute="centerX" id="m45-f9-v1k"/>
