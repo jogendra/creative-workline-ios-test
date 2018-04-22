@@ -1,4 +1,4 @@
-# creative-workline-ios-test
+# Creative Workline iOS Test
 iOS Developer Summer Internship Test Project for Creative Workline.
 
 ### Screenshots:
